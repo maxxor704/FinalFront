@@ -1,19 +1,37 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <center>
+   <div class="my-2">
+   <v-btn color="primary" exact to="/login">Login</v-btn>
+   <br>
+   <br>
+   <br>
+   <v-btn color="primary" exact to="/formulario">Registro</v-btn>
+   </div>
+    </center>
+<router-view >
+</router-view>
+  </v-app>
+     
+
 </template>
 
-<style lang="stylus">
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
-</style>
+<script>
+
+import login from '@/views/login'
+import formulario from '@/views/formulario'
+
+export default {
+  name: 'App',
+
+  components: {
+   
+    login,
+    formulario,
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
